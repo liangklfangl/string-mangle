@@ -1,0 +1,26 @@
+{
+  "name": "string-mangle",
+  "version": "0.0.1",
+  "description": "How to stringify an object or  array",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liangklfangl/string-mangle.git"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "string",
+    "stringify"
+  ],
+  "author": "liangklfangl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liangklfangl/string-mangle/issues"
+  },
+  "homepage": "https://github.com/liangklfangl/string-mangle#readme"
+}
