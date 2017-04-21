@@ -1,6 +1,6 @@
 {
   "name": "string-mangle",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "How to stringify an object or  array",
   "main": "index.js",
   "scripts": {
