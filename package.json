@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/liangklfangl/string-mangle/issues"
   },
-  "homepage": "https://github.com/liangklfangl/string-mangle#readme"
+  "homepage": "https://github.com/liangklfangl/string-mangle#readme",
+  "dependencies": {
+    "ramda": "^0.23.0"
+  }
 }
