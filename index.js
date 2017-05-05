@@ -1,5 +1,6 @@
 const path = require("path");
 const R = require("ramda");
+
 function stringify(node, depth = 0) {
   const indent = '  '.repeat(depth);
   if (Array.isArray(node)) {
@@ -56,13 +57,16 @@ function stringifyPattern(nodePath, nodeValue, depth) {
  * @param  {[type]}  obj      [description]
  */
 function stringifyObject(nodePath, obj, depth) {
+  let keyLength = R.keys(obj).length;
   const indent = '  '.repeat(depth);
-  const kvStrings = R.pipe(
-    R.toPairs,
-    //R.toPairs({a: 1, b: 2, c: 3}); //=> [['a', 1], ['b', 2], ['c', 3]]
-    R.map((kv) => 
-          `${indent}  '${kv[0]}': ${stringifyPattern(nodePath + '/' + kv[0], kv[1], depth + 1)}`)
-  )(obj);
+  const pairs = R.toPairs(obj);
+  //R.toPairs({a: 1, b: 2, c: 3}); 
+  //=> [['a', 1], ['b', 2], ['c', 3]]
+  const kvStrings = pairs.map((kv,index)=>{
+    const comma = (index+1) == keyLength ? "" : ",";
+    return `${indent}  '${kv[0]}': ${stringifyPattern(nodePath + '/' + kv[0], kv[1],  depth + 1)}${comma}`;
+  });
+ 
   return kvStrings.join('\n');
 }
 module.exports = {

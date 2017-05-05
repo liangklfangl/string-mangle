@@ -4,9 +4,9 @@ $ npm install --save string-mangle
 ```
 ## Usage
 ```js
-const string = require('./index.js');
+const Smangle = require('./index.js');
 const obj ={name:'liangklfangl',sex:'male'};
-console.log(string.stringify(obj));
+console.log(Smangle.stringify(obj));
 ```
 Then you will get something bellow(A valid json):
 ```js
