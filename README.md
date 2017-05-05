@@ -59,6 +59,6 @@ Then you get something bellow returned:
   }
 }
 ```
-
+If you just want to return an string object without required call, please use `stringify` instead!
 
 
